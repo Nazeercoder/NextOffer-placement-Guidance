@@ -1,0 +1,21 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin overview | NextOffer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" th:href="@{/css/style.css(v=4)}" />
+</head>
+<body>
+  <nav class="navbar"><div class="container-fluid"><a class="navbar-brand" th:href="@{/admin/dashboard}">NextOffer<span style="color:#edf3ff">.</span> <small class="text-secondary">Admin</small></a><a class="btn btn-danger" th:href="@{/logout}">Log out</a></div></nav>
+  <main class="container page-wrap">
+    <div class="hero-kicker">Platform administration</div>
+    <h1 class="page-heading">Admin overview</h1>
+    <p class="page-subtitle">Monitor registered accounts across NextOffer.</p>
+    <section class="row g-3">
+      <div class="col-sm-6 col-lg-4"><div class="card stat-card"><div class="card-body"><div class="stat-label">Registered users</div><div class="stat-number" th:text="${userCount}">0</div><a class="btn btn-success mt-3" th:href="@{/admin/users}">View and manage users</a></div></div></div>
+    </section>
+  </main>
+</body>
+</html>

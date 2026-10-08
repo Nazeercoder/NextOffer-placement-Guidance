@@ -1,0 +1,38 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Edit DSA Problem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/style.css(v=3)}" />
+  </head>
+
+  <body><main class="auth-shell"><div class="card auth-card"><div class="auth-header"><div class="hero-kicker">Keep your practice current</div><h1 class="mt-2">Edit problem</h1></div><div class="card-body">
+
+    <form action="/update-problem" method="post" th:object="${problem}">
+      <input type="hidden" th:field="*{id}" />
+
+      <div class="mb-3"><label class="form-label">Problem name</label><input class="form-control" type="text" th:field="*{problemName}" /></div>
+
+      <div class="mb-3"><label class="form-label">Topic</label><input class="form-control" type="text" th:field="*{topic}" /></div>
+
+      <div class="mb-3"><label class="form-label">Difficulty</label>
+
+      <select class="form-select" th:field="*{difficulty}">
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+      </select></div>
+
+      <br /><br />
+
+      <label class="form-check-label">Solved</label>
+      <input type="checkbox" th:field="*{solved}" />
+
+      <br /><br />
+
+      <div class="d-flex gap-2"><button class="btn btn-success" type="submit">Save changes</button><a class="btn btn-outline-light" th:href="@{/problems}">Cancel</a></div>
+    </form></div></div></main>
+  </body>
+</html>

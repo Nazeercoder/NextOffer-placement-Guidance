@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NextOffer | Your next role starts here</title>
+    <link rel="stylesheet" th:href="@{/css/style.css(v=3)}" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" th:href="@{/}">NextOffer<span style="color:#edf3ff">.</span></a>
+        <div class="ms-auto d-flex gap-2">
+          <a class="btn btn-outline-light" th:href="@{/login}">Log in</a>
+          <a class="btn btn-success" th:href="@{/register}">Create account</a>
+          <a class="btn btn-outline-light" th:href="@{/admin/login}">Admin</a>
+        </div>
+      </div>
+    </nav>
+    <main class="hero">
+      <div class="hero-content">
+        <div class="hero-kicker">Your career, in motion</div>
+        <h1>Make your next offer your best one.</h1>
+        <p>Bring your interview pipeline and coding practice together. Build momentum, see your progress, and feel ready for what comes next.</p>
+        <div class="hero-actions">
+          <a class="btn btn-success btn-lg" th:href="@{/register}">Get started <span aria-hidden="true">→</span></a>
+          <a class="btn btn-outline-light btn-lg" th:href="@{/login}">I already have an account</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
